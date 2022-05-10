@@ -1,10 +1,9 @@
 body {
     background-color: #000000!important;
     padding-top: 60px;
-    }
-
+}
 .backdrop {
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0,0,0,.4);
     position: fixed;
     top: 60px;
     left: 0;
@@ -12,14 +11,18 @@ body {
     bottom: 0;
     z-index: 999;
 }
+.form-label {
+    color: #8f8f8f;
+    
+}
 .navbar {
     z-index: 1000;
 }
 .navbar.bg-dark {
-    background-color: rgb(0, 0, 0)!important;
+    background-color: rgba(0,0,0,.6)!important;
 }
 .navbar .form-control {
-    background-color: #0e0e0e!important;
+    background-color: #1B1B1B!important;
     color: #FFF;
     border-color: #FFF;
     border-radius: 0;
@@ -29,15 +32,13 @@ body {
 }
 .navbar img {
     height: 24px;
-   
-
 }
 .navbar ul.sidebar {
     color: #999898;
     max-width: 250px;
-    background-color: #383838!important;
+    background-color: #1B1B1B!important;
     position: absolute;
-    top: 70px;
+    top: 60px;
     left: -250px;
     height: calc(100vh - 60px);
     overflow-y: auto;
@@ -64,8 +65,25 @@ body {
 .media-avatar img {
     height: 38px;
 }
+.quadroLog {
+    min-height: 120px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.quadroLog small {
+    color: #999898;
+}
+.quadroLog .btn-primary {
+    background-color: #E30F19;
+    border-radius: 0;
+    border: none;
+    min-width: 100px;
+}
+
+
 .full-banner {
-    
+    background-image: url('/assets/images/full-banner.jpg');
     min-height: 120px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -78,7 +96,7 @@ body {
     background-color: #E30F19;
     border-radius: 0;
     border: none;
-    min-width: 200px;
+    min-width: 100px;
 }
 .list-titles img {
     min-width: 160px;
@@ -115,7 +133,7 @@ footer {
 .title-item .items {
     position: absolute;
     bottom: 0;
-    left: 50;
+    left: 0;
     right: 0;
     color: #fff;
     height: 100%;
@@ -207,6 +225,9 @@ footer {
     font-weight: bold;
 }
 @media (min-width: 576px) {
+    .quadroLog {
+        min-height: 256px;
+    }
     .full-banner {
         min-height: 256px;
     }
@@ -215,6 +236,9 @@ footer {
     }
 }
 @media (min-width: 768px) {
+    .quadroLog .d-flex {
+        align-items: center;
+    }
     .full-banner .d-flex {
         align-items: center;
     }
@@ -227,6 +251,13 @@ footer {
         background-color: transparent!important;
         background-image: url('/assets/images/header_gradient.png');
         background-repeat: repeat-x;
+    }
+    .quadroLog {
+        min-height: 50vh;
+    }
+    .quadroLog p {
+        color: #999898;
+        max-width: 50vw;
     }
     .full-banner {
         min-height: 50vh;
